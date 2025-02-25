@@ -1,0 +1,140 @@
+/* style.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Container untuk tombol */
+.button-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button-container a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Tombol Aksi dalam Tabel */
+td a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td a.edit {
+    background-color: #2ecc71;
+    color: white;
+}
+
+td a.edit:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+td a.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+td a.delete:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+td a.pinjam {
+    background-color: #f39c12;
+    color: white;
+}
+
+td a.pinjam:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+}
+
+/* Efek hover pada tombol aksi */
+td a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
