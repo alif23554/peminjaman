@@ -19,14 +19,14 @@
             <th>Tanggal Pinjam</th>
         </tr>
         <?php
-        $query = "SELECT peminjaman.id, buku.judul, peminjaman.nama_peminjam, peminjaman.tanggal_pinjam, buku.jumlah_peminjaman
-                  FROM peminjaman 
-                  JOIN buku ON peminjaman.buku_id = buku.id";
+        $query = "SELECT * FROM peminjaman
+                  INNER JOIN buku ON peminjaman.buku_id = buku.id
+                  INNER JOIN anggota ON peminjaman.anggota_id = anggota.id";
         $result = mysqli_query($koneksi, $query);
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
                     <td>" . $row['judul'] . "</td>
-                    <td>" . $row['nama_peminjam'] . "</td>
+                    <td>" . $row['nama'] . "</td>
                     <td>" . $row['tanggal_pinjam'] . "</td>
                 </tr>";
         }
