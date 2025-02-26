@@ -11,7 +11,7 @@ $stok = $row_stok['stok'];
 
 if ($stok > 0) {
 
-    $query = "INSERT INTO peminjaman (buku_id, anggota_id, tanggal_pinjam) VALUES ('$buku_id', '$snggota_id', '$tanggal_pinjam')";
+    $query = "INSERT INTO peminjaman (buku_id, anggota_id, tanggal_pinjam) VALUES ('$buku_id', '$anggota_id', '$tanggal_pinjam')";
     mysqli_query($koneksi, $query);
 
     $query_stok = "UPDATE buku SET stok = stok - 1 WHERE id = '$buku_id'";
